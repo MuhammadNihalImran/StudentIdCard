@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="formContainer">
+        <div class="headerform">
+          <h1>Student Id card</h1>
+          <h1>form</h1>
+        </div>
+        <div class="form">
+          <form id="studentForm">
+            <div class="inputField">
+              <label for="STUDENT NAME">STUDENTNAME</label>
+              <input
+                required
+                type="text"
+                id="student"
+                placeholder="Enter your Name"
+              />
+            </div>
+            <div class="inputField">
+              <label for="DATE OF BIRTH">DATE OF BIRTH</label>
+              <input
+                required
+                type="date"
+                id="dateOfBirth"
+                placeholder="Enter your Birth"
+              />
+            </div>
+            <div class="inputField">
+              <label for="CLASS NAME">CLASS NAME</label>
+              <input
+                required
+                type="text"
+                id="studentClass"
+                placeholder="Enter your Class"
+              />
+            </div>
+            <div class="inputField">
+              <label for="ROLL NUMBER">ROLL NUMBER</label>
+              <input
+                required
+                type="number"
+                id="studentRollNumber"
+                placeholder="Enter your Roll number"
+              />
+            </div>
+            <div class="inputField">
+              <label for="CONTACT NUMBER">CONTACT NUMBER</label>
+              <input
+                required
+                type="number"
+                id="studentCONTACTNumber"
+                placeholder="Enter your CONTACT number"
+              />
+            </div>
+            <div class="button">
+              <div class="inputField">
+                <button type="submit" onclick="submithandler()">Submit</button>
+              </div>
+              <div class="inputField">
+                <button type="submit" onclick="clearhandler()">
+                  Clear All
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="footer"></div>
+      </div>
+      <div class="cardContainer">
+        <div class="header">
+          <div class="logo"></div>
+          <div class="info">
+            <h1>School</h1>
+            <h1>Year</h1>
+            <h1>2024-2025</h1>
+          </div>
+        </div>
+        <div class="image">
+          <img
+            src="./assests/images/photo-1499996860823-5214fcc65f8f.avif"
+            alt="STUDENT PIc"
+          />
+        </div>
+        <div class="studentInfo">
+          <p>Name: <span id="studentName"></span></p>
+          <p>Date of Birth: <span id="studentDOB"></span></p>
+          <p>Class: <span id="studentClassResult"></span></p>
+          <p>Roll Number: <span id="studentRoll"></span></p>
+          <p>Contact: <span id="studentContact"></span></p>
+        </div>
+        <div class="heading">STUDENT IDENTITY CARD</div>
+        <div class="footer">
+          <button type="submit" id="button" onclick="prinIdCard()">
+            Print
+          </button>
+          <button type="submit" id="button" onclick="backToForm()">back</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>

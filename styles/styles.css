@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.formContainer {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 55vmin;
+  height: 90vh;
+  border-radius: 38px;
+  background: #ffffff;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+.form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.inputField {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #ad8e79;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+input[type="text"]::placeholder,
+input[type="date"]::placeholder {
+  color: #999;
+}
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #ad8e79;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #ad8e79b7;
+}
+#button {
+  width: 20%;
+  padding: 10px;
+  background-color: #fff;
+  color: #ad8e79;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#button:hover {
+  background-color: #ffffff98;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cardContainer {
+  position: relative;
+  width: 25vw;
+  height: 90vh;
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  /* background-color: red; */
+  border-radius: 38px;
+  background: #ffffff;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.headerform {
+  width: 100%;
+  height: 25vh;
+  background-color: #ad8e79;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+.header {
+  width: 100%;
+  height: 25vh;
+  background-color: #ad8e79;
+  display: flex;
+  justify-content: space-between;
+  line-height: 30px;
+  font-family: sans-serif;
+  font-weight: 600;
+  color: #fffffd;
+  text-align: end;
+}
+
+.header .info {
+  padding: 20px;
+}
+
+.heading {
+  position: absolute;
+  top: 55%;
+  left: -30%;
+  font-size: 1.7rem;
+  font-weight: 900;
+  font-family: sans-serif;
+  letter-spacing: -2px;
+  rotate: 90deg;
+  color: #605f66;
+}
+
+.image {
+  position: absolute;
+  width: 15vw;
+  height: 35vh;
+  top: 23%;
+  left: 25%;
+  border: 5px solid #605f66;
+  border-radius: 10%;
+  overflow: hidden;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.studentInfo {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  top: 65%;
+  right: 15%;
+  color: #d8bb99;
+}
+.studentInfo p {
+  text-transform: uppercase;
+  width: 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #605f66;
+  font-weight: 600;
+}
+.studentInfo p span {
+  color: #5e5d62;
+}
+
+.footer {
+  width: 100%;
+  height: 8%;
+  background-color: #ad8e79;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .formContainer {
+    width: 100%;
+    height: 100vh;
+  }
+  .cardContainer {
+    width: 100%;
+    height: 100vh;
+  }
+  .image {
+    width: 60vw;
+    top: 20%;
+  }
+  .studentInfo {
+    width: 100%;
+    top: 58%;
+    left: 5%;
+  }
+  .studentInfo p {
+    width: 60%;
+  }
+}
+
+@media print {
+  .cardContainer {
+    width: 70% !important;
+    /* background-color: #ad8e79 !important; */
+  }
+  .header {
+    width: 100% !important;
+    /* height: 1000px !important; */
+    font-size: 25px !important;
+    line-height: 50px !important;
+    background-color: #ad8e79 !important;
+    -webkit-print-color-adjust: exact !important; /* Ensures background color in Webkit browsers */
+    print-color-adjust: exact !important; /* Ensures background color in other browsers */
+  }
+
+  .image {
+    width: 60% !important;
+    top: 20% !important;
+  }
+  .studentInfo {
+    width: 100% !important;
+    top: 60%;
+    left: 5%;
+    font-size: 25px;
+  }
+  .studentInfo p {
+    width: 65%;
+  }
+
+  .heading {
+    font-size: 40px !important;
+    left: -40% !important;
+    top: 57% !important;
+  }
+  .footer {
+    background-color: #ad8e79 !important;
+    -webkit-print-color-adjust: exact !important; /* Ensures background color in Webkit browsers */
+    print-color-adjust: exact !important;
+  }
+  .footer button {
+    display: none !important;
+  }
+}
