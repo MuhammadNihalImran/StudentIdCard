@@ -12,6 +12,13 @@ function submithandler(e) {
     "#studentCONTACTNumber"
   ).value;
 
+  let profilePic = document.getElementById("profile-pic");
+  let inputFile = document.getElementById("input-file");
+  if (inputFile.files.length > 0) {
+    profilePic.src = URL.createObjectURL(inputFile.files[0]);
+    console.log(profilePic.src);
+  }
+
   document.querySelector(".cardContainer").style.display = "flex";
   document.querySelector(".formContainer").style.display = "none";
 }
@@ -22,6 +29,7 @@ function clearhandler() {
   document.querySelector("#studentClass").value = "";
   document.querySelector("#studentRollNumber").value = "";
   document.querySelector("#studentCONTACTNumber").value = "";
+  document.querySelector("#input-file").value = "";
 }
 
 document
